@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom'
 import "./Header.css";
 import assets from "../../../public/assets";
 import SideBar from "../SideBar/SideBar";
@@ -28,18 +29,18 @@ function Header() {
 
       <div className="Navigation">
         <div className="main-logo">
-          <img src={assets.logo} alt="logo" />
+          <Link to='*'><img src={assets.logo} alt="logo" /></Link>
         </div>
         <ul className="nav-links">
           <li onMouseOver={() => findNavItem('Subjects')}>
             <h2>Courses</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
-          <li onMouseOver={() => findNavItem('Programs')}>
-            <h2>Admission</h2>
+          <li onMouseOver={() => findNavItem('Gallery')}>
+            <h2>Gallery</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
-          <li onMouseOver={() => findNavItem('Programs')}>
+          <li onMouseOver={() => findNavItem('About Us')}>
             <h2>About Us</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
