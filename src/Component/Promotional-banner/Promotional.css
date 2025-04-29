@@ -1,0 +1,65 @@
+.Promotional{
+    overflow: hidden;
+}
+.Promotional, .banner-img {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient( 135deg, #9538f1 10%, #6056d1 100%);
+    position: relative;
+}
+.banner-img{
+    width: 50% !important;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+.banner-img img {
+    width: 100%;
+    height: 100%;
+}
+.banner-shadow {
+    padding: 6rem 0 0 3rem;
+    width: 40%;
+    margin-bottom: 47px;
+}
+.banner-shadow h2 {
+    font-size: 29px;
+    color: var(--background-light);
+    margin: 15px 0;
+    animation: fadIn .7s ease-in;
+}
+.banner-shadow p {
+    font-size: 16px;
+    font-weight: 800;
+    margin: 13px 0;
+    color: var(--background-light);
+    animation: fadIn .7s ease-in;
+}
+.banner-shadow button {
+    height: 40px;
+    width: 191px;
+    color: #fff;
+    font-weight: 900;
+    background: linear-gradient(135deg, #6056d1, #9538f1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    animation: fadIn .7s ease-in;
+    transition: 0.8s;
+    border: 1.4px solid white;
+}
+.banner-shadow button:hover {
+     transform: scale(1.1);
+     background: linear-gradient(135deg, #4c44ad, #5f2b94);
+}
+@media(max-width:1140px){
+    .banner-img{
+        display: none;
+    } 
+    .banner-shadow {
+        padding: 4rem 0 0 2rem !important;
+        width: 90% !important;
+    }
+}
+
