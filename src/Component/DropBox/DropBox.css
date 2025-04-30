@@ -32,3 +32,14 @@
 ul.sub-list li {
     font-size: 22px;
 }
+li.main-item a {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+
+

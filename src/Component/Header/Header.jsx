@@ -29,7 +29,7 @@ function Header() {
 
       <div className="Navigation">
         <div className="main-logo">
-          <Link to='*'><img src={assets.logo} alt="logo" /></Link>
+          <Link to='/'><img src={assets.logo} alt="logo" /></Link>
         </div>
         <ul className="nav-links">
           <li onMouseOver={() => findNavItem('Subjects')}>

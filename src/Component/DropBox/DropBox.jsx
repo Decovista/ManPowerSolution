@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './DropBox.css';
 import { GlobalContext } from '../../context/GlobalContext';
 import { useNavigate } from 'react-router-dom';
@@ -17,19 +18,10 @@ function DropBox({ navItem, setNavItem }) {
     <ul>
       {courseData.slice(0, 9).map((item, index) => (
         <li key={index} className="main-item" onClick={() => setTrackSubTitle(item)}>
-          <h2>{item.Title}</h2>
-          <i className="fa-solid fa-chevron-right"></i>
-        </li>
-      ))}
-    </ul>
-  );
-
-  const renderCourses = () => (
-    <ul>
-      {courseData[0]?.Subject?.slice(0, 9).map((item, index) => (
-        <li key={index} className="main-item" onClick={() => setTrackSubTitle(item)}>
-          <h2>{item.SubjectTitle}</h2>
-          <i className="fa-solid fa-chevron-right"></i>
+          <Link to={`/${item.path}`}>
+            <h2>{item.Title}</h2>
+            <i className="fa-solid fa-chevron-right"></i>
+          </Link>
         </li>
       ))}
     </ul>
@@ -54,7 +46,6 @@ function DropBox({ navItem, setNavItem }) {
     <div className="DropBox" onMouseLeave={() => setNavItem('')}>
       <div className="drop-box-wrapper">
         {navItem === 'Subjects' && renderSubjects()}
-        {navItem === 'Courses' && renderCourses()}
         {navItem === 'Gallery' && renderGalleryLinks()}
       </div>
     </div>

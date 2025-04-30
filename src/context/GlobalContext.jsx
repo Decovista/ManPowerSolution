@@ -10,7 +10,7 @@ export const GlobalProvider = ({ children }) => {
   };
    
   const courseData = [
-    {
+    { id:  '1',
       Title: 'Electrical Engineering',
       path: 'electrical-engineering',
       Subject: [
@@ -27,6 +27,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Covers basic to advanced electrical principles, machine handling, safety, and hands-on circuit projects.`
     },
     {
+      id:  '2',
       Title: 'Solar Energy Technician',
       path: 'solar-energy-technician',
       Subject: [
@@ -41,6 +42,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Train in designing, installing, and maintaining solar systems with a focus on safety and green energy careers.`
     },
     {
+      id:  '3',
       Title: 'Electronic Technician',
       path: 'electronic-technician',
       Subject: [
@@ -53,6 +55,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Learn circuit theory, soldering, troubleshooting, and repairing a variety of electronic devices.`
     },
     {
+      id:  '4',
       Title: 'Welder Training',
       path: 'welder-training',
       Subject: [
@@ -65,6 +68,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Master professional welding techniques, plasma cutting, and blueprint reading for the metalwork industry.`
     },
     {
+      id:  '5',
       Title: 'Fitter',
       path: 'fitter',
       Subject: [
@@ -76,6 +80,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Skill development for mechanical fitting, precision measurement, and lathe operations for industrial work.`
     },
     {
+      id:  '6',
       Title: 'Animal Husbandry & Artificial Insemination (AI)',
       path: 'animal-husbandry-artificial-insemination',
       Subject: [
@@ -88,6 +93,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Focuses on livestock care, artificial breeding, animal health, and business opportunities in animal farming.`
     },
     {
+      id:  '7',
       Title: 'Rural Medical Practitioner (RMP)',
       path: 'rural-medical-practitioner',
       Subject: [
@@ -99,6 +105,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Train to deliver basic healthcare, emergency first aid, and patient care services in rural areas.`
     },
     {
+      id:  '8',
       Title: 'Mobile Repair',
       path: 'mobile-repair',
       Subject: [
@@ -110,6 +117,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Hands-on repair training covering mobile hardware, software flashing, unlocking, and data recovery.`
     },
     {
+      id:  '9',
       Title: 'Computer Repair',
       path: 'computer-repair',
       Subject: [
@@ -121,6 +129,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Comprehensive course on diagnosing, repairing, and maintaining computers and laptops.`
     },
     {
+      id:  '10',
       Title: 'Automobile Technician',
       path: 'automobile',
       Subject: [
@@ -132,6 +141,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Training in automobile repair, engine maintenance, and the latest EV diagnostic technologies.`
     },
     {
+      id:  '11',
       Title: 'Agriculture',
       path: 'agriculture',
       Subject: [
@@ -143,6 +153,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Practical farming skills, smart agriculture methods, soil and crop management.`
     },
     {
+      id:  '12',
       Title: 'Marketing and Sales',
       path: 'marketing-and-sales',
       Subject: [
@@ -154,6 +165,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Equips students with marketing strategies, digital branding, CRM use, and consumer analysis.`
     },
     {
+      id:  '13',
       Title: 'Accounting and Finance',
       path: 'accounting-and-finance',
       Subject: [
@@ -165,6 +177,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Training in financial records management, budgeting, auditing, and investment handling.`
     },
     {
+      id:  '14',
       Title: 'Hotel Management',
       path: 'hotel-management',
       Subject: [
@@ -176,6 +189,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Prepare for hotel, hospitality, and event management careers with customer service expertise.`
     },
     {
+      id:  '15',
       Title: 'Driving Training',
       path: 'driving-training',
       Subject: [
@@ -187,6 +201,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Covers vehicle handling, driving rules, safety procedures, and practical driving skills.`
     },
     {
+      id:  '16',
       Title: 'Safety Training',
       path: 'safety-training',
       Subject: [
@@ -198,6 +213,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Learn about workplace safety standards, hazard management, and first aid response skills.`
     },
     {
+      id:  '17',
       Title: 'Amanat Training',
       path: 'amanat-training',
       Subject: [
@@ -209,6 +225,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Focus on personal development, integrity, leadership, and responsibility skills.`
     },
     {
+      id:  '18',
       Title: 'Plumbing Work',
       path: 'plumbing-work',
       Subject: [
@@ -220,6 +237,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Teaches plumbing basics, water system installations, and maintenance troubleshooting techniques.`
     },
     {
+      id:  '19',
       Title: 'Civil Training Work',
       path: 'civil-training-work',
       Subject: [
@@ -231,6 +249,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Learn surveying, structural design, construction site management, and materials testing.`
     },
     {
+      id:  '20',
       Title: 'HVAC (Heating, Ventilation, and Air Conditioning)',
       path: 'hvac',
       Subject: [
@@ -242,6 +261,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Train in installing, repairing, and optimizing heating, cooling, and ventilation systems.`
     },
     {
+      id:  '21',
       Title: 'Mechanical',
       path: 'mechanical',
       Subject: [
@@ -253,6 +273,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Covers mechanical engineering concepts, material testing, CAD drawing, and robotics systems.`
     },
     {
+      id:  '22',
       Title: 'Beauty Parlor',
       path: 'beauty-parlor',
       Subject: [
@@ -264,6 +285,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Comprehensive beauty training in skincare, hairstyling, salon management, and new beauty trends.`
     },
     {
+      id:  '23',
       Title: 'Tally',
       path: 'tally',
       Subject: [
@@ -275,6 +297,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Learn Tally accounting software, tax handling, inventory management, and financial reporting.`
     },
     {
+      id:  '24',
       Title: 'Carpentry',
       path: 'carpentry',
       Subject: [
@@ -286,6 +309,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Train in woodworking, carpentry skills, cabinet making, and safety in construction.`
     },
     {
+      id:  '25',
       Title: 'Painter',
       path: 'painter',
       Subject: [
@@ -297,6 +321,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Master painting techniques, surface preparation, decorative designs, and safety in workspaces.`
     },
     {
+      id:  '26',
       Title: 'Tiles Work Training',
       path: 'tiles-work-training',
       Subject: [
@@ -308,6 +333,7 @@ export const GlobalProvider = ({ children }) => {
       description: `Learn tiling, floor preparation, cutting tiles, and hands-on installation with modern patterns.`
     },
     {
+      id:  '27',
       Title: 'Aluminium Training and Glass Work',
       path: 'aluminium-training-glass-work',
       Subject: [
