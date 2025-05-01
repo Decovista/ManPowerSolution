@@ -1,18 +1,44 @@
-import React, { useState } from "react";
-import {Link} from 'react-router-dom'
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 import "./Header.css";
 import assets from "../../../public/assets";
 import SideBar from "../SideBar/SideBar";
 import DropBox from "../DropBox/DropBox";
+import { GlobalContext } from "../../context/GlobalContext";
 
 function Header() {
   const [toggleRegister, setToggleRegister] = useState(false);
   const [toggleSearch, setToggleSearch] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [navItem, setNavItem] = useState('');
+  const [searchInput, setSearchInput] = useState('');
+  const navigate = useNavigate();
+  const { courseData,setGetFinder } = useContext(GlobalContext);
 
   const findNavItem = (item) => {
     setNavItem(item);
+  };
+
+  const handleSearch = () => {
+    const input = searchInput.trim().toLowerCase();
+    if (!input) return;
+
+    const foundCourse = courseData.find(course => {
+      const titleMatch = course.Title?.toLowerCase().includes(input);
+      const subjectMatch = course.Subject?.some(subject =>
+        subject.SubjectTitle?.toLowerCase().includes(input)
+      );
+      return titleMatch || subjectMatch;
+    });
+
+
+    if (foundCourse?.path) {
+      navigate(`/${foundCourse.path}`);
+      setSearchInput('');
+      setToggleSearch(false);
+    } else {
+      setGetFinder(true)
+    }
   };
 
   return (
@@ -21,8 +47,14 @@ function Header() {
         <div className={`${toggleSearch ? 'hide-bar' : ''} input-con-top-m`}>
           <i className="fa-solid fa-xmark" onClick={() => setToggleSearch(false)}></i>
           <div className="input-con-top">
-            <input type="text" placeholder="Courses" />
-            <i className="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Courses"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+            />
+            <i className="fa-solid fa-magnifying-glass" onClick={handleSearch}></i>
           </div>
         </div>
       </div>
@@ -31,17 +63,15 @@ function Header() {
         <div className="main-logo">
           <Link to='/'><img src={assets.logo} alt="logo" /></Link>
         </div>
+
         <ul className="nav-links">
+          <Link to='/'><li><i className="fa-solid fa-house"></i></li></Link>
           <li onMouseOver={() => findNavItem('Subjects')}>
             <h2>Courses</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
           <li onMouseOver={() => findNavItem('Gallery')}>
             <h2>Gallery</h2>
-            <i className="fa-solid fa-chevron-down"></i>
-          </li>
-          <li onMouseOver={() => findNavItem('About Us')}>
-            <h2>About Us</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
           <li onMouseOver={() => findNavItem('Career')}>
@@ -51,9 +81,15 @@ function Header() {
 
         <div className="nav-tools">
           <div className="input-con">
-            <input type="text" placeholder="Courses" />
+            <input
+              type="text"
+              placeholder="Courses"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+            />
             <i
-              onClick={() => setToggleSearch(!toggleSearch)}
+              onClick={() => setToggleSearch(true)}
               className="fa-solid fa-magnifying-glass"
             ></i>
           </div>
@@ -78,16 +114,8 @@ function Header() {
         </div>
       </div>
 
-      {toggleSidebar && (
-        <SideBar
-          setToggleSidebar={setToggleSidebar}
-        />
-      )}
-
-      {navItem && <DropBox 
-      navItem={navItem}
-      setNavItem={setNavItem}
-      findNavItem={findNavItem} />}
+      {toggleSidebar && <SideBar setToggleSidebar={setToggleSidebar} />}
+      {navItem && <DropBox navItem={navItem} setNavItem={setNavItem} findNavItem={findNavItem} />}
     </div>
   );
 }

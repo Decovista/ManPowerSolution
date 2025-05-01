@@ -7,7 +7,7 @@
   z-index: 999;
   font-family: "Tuffy", sans-serif;
 }
-.input-con-top-m{
+.hide-bar{
     display: none;
     animation: fadIn 0.6s ease-in;
 }
@@ -114,7 +114,10 @@
   transition: background-color 0.3s ease;
   outline: none;
 }
-
+i.fa-solid.fa-house {
+  font-size: 19px;
+  margin-top: 4px;
+}
 .Register-btn button:hover {
   background-color: #f33649;
   transform: scale(1.07);
@@ -158,12 +161,21 @@ ul.Register-drop-box li:hover{
     margin-top: 12px;
 }
 .input-con-top input {
-    height: 38px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid gray;
-    padding: 0 10px;
+  height: 36px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #4b0082;
+  padding: 0 10px;
+  color: #4b0082;
+  font-weight: 700;
+  font-size: 15px;
 }
+.input-con-top input::placeholder{
+  color: #4b0082;
+  font-weight: 700;
+  font-size: 15px;
+}
+
 i.fa-solid.fa-xmark {
     position: absolute;
     right: 10%;

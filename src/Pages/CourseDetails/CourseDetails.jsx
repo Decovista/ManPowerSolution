@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { GlobalContext } from '../../context/GlobalContext';
+import './CourseDetails.css'
 
 const CourseDetail = () => {
   const { path } = useParams();  

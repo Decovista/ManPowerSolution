@@ -8,9 +8,15 @@
     max-width: 1280px;
     margin: 0 auto;
 }
-p {
+.courseDetails p {
     font-size: 23px;
     font-weight: 500;
     color: var(--accent-color);
     margin: 20px 0;
+}
+.courseDetails li {
+    font-size: 19px;
+    margin: 21px 0;
+    color: var(--primary-color);
+    list-style: none;
 }

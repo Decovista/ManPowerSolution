@@ -4,7 +4,7 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [subTitle, setSubTitle] = useState('');
-
+  const [getFinder, setGetFinder] = useState(false)
   const getSubTitle = (e) => {
     setSubTitle(e.target.value);
   };
@@ -348,7 +348,7 @@ export const GlobalProvider = ({ children }) => {
   
 
   return (
-    <GlobalContext.Provider value={{ subTitle, getSubTitle,courseData }}>
+    <GlobalContext.Provider value={{ subTitle, getSubTitle,courseData,getFinder, setGetFinder}}>
       {children}
     </GlobalContext.Provider>
   );

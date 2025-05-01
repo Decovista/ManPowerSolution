@@ -27,7 +27,7 @@
     align-items: center;
     border-bottom: 1.5px solid #094d91;
     font-size: 12px;
-    color: #134270;
+    color: var(--primary-color)
 }
 ul.sub-list li {
     font-size: 22px;
