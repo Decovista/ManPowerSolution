@@ -195,7 +195,9 @@ i.fa-solid.fa-xmark {
     cursor: pointer;
     margin-left: -4px;
 }
-
+.search-bar-top {
+  display: none;
+}
 @media (max-width: 768px) {
   .Navigation {
     align-items: flex-start;
@@ -225,6 +227,9 @@ i.fa-solid.fa-xmark {
       .hide-bar{
         display: block;
       }
+      .search-bar-top {
+        display: block !important;
+    }
 }
 @media(max-width:768px){
     .Header .fa-bars{
