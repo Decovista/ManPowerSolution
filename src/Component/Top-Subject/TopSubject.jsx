@@ -9,6 +9,7 @@ import Solar2 from '../../../public/Solar-panel2.jpg'
 const subjectsData = [
   {
     "title": "Electrical Engineering",
+    path: '/electrical-engineering',
     "description": "Master the building blocks of modern electrical technology with expert-led courses and practical training.",
     "detail": "Dive deep into the world of electrical systems, from the basics of current and voltage to advanced smart home installations. Gain hands-on experience with transformers, motors, and generators, and ensure electrical safety following the latest industry standards. Learn troubleshooting skills and modern energy solutions to power your career forward.",
     "quote": "This course made complex electrical topics easy to understand with lots of real-world applications.",
@@ -30,6 +31,7 @@ const subjectsData = [
   },
   {
     "title": "Solar Energy Technician",
+    path:'/solar-energy-technician',
     "description": "Become a solar energy expert and lead the way towards a greener, more sustainable future.",
     "detail": "Learn everything from the fundamentals of solar power systems to installation techniques and maintenance. Understand different types of solar panels, batteries, and inverters while gaining real-world insights into site assessments and safety standards. Equip yourself to build a rewarding career in the booming solar industry.",
     "quote": "Thanks to this course, I successfully installed my first residential solar system. Very detailed and practical.",
@@ -86,7 +88,7 @@ function TopSubject() {
           <footer>- {subjectsData[activeTab].person}</footer>
         </blockquote>
 
-        <button className="explore-btn">Explore courses</button>
+        <Link to={subjectsData[activeTab].path}>  <button className="explore-btn">Explore courses</button></Link>
         </div>
         <div className="courses-cards">
           {subjectsData[activeTab].courses.map((course, idx) => (

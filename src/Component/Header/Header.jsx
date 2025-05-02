@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, useRef} from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import "./Header.css";
 import assets from "../../../public/assets";
@@ -11,14 +11,26 @@ function Header() {
   const [toggleSearch, setToggleSearch] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [navItem, setNavItem] = useState('');
-  const [searchInput, setSearchInput] = useState('');
   const navigate = useNavigate();
-  const { courseData, setGetFinder } = useContext(GlobalContext);
+  const { courseData, setGetFinder,searchInput,setSearchInput } = useContext(GlobalContext);
+  const dropDownRef = useRef('')
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
+        setNavItem('');
+      }
+    };
+  
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
+  
 
   const findNavItem = (item) => {
     setNavItem(item);
   };
-  
   useEffect(() => {
     setGetFinder(false);
   }, [setGetFinder]);
@@ -51,7 +63,7 @@ function Header() {
   };
 
   return (
-    <div className="Header">
+    <div className="Header" onMouseLeave={() => setNavItem('')}>
       <div className={`${toggleSearch ? 'show-search' : ''} search-bar-top`}>
         <div className={`${toggleSearch ? 'hide-bar' : ''} input-con-top-m`}>
           <i className="fa-solid fa-xmark" onClick={() => setToggleSearch(false)}></i>
@@ -75,17 +87,27 @@ function Header() {
 
         <ul className="nav-links">
           <Link to='/'><li><i className="fa-solid fa-house" onClick={() => setGetFinder(false)}></i></li></Link>
-          <li onMouseOver={() => findNavItem('Subjects')} onClick={() => setGetFinder(false)}>
+          <li
+          onMouseOver={() => findNavItem('Subjects')} onClick={() =>{
+            setGetFinder(false)
+            findNavItem('Subjects')
+           }}>
             <h2>Courses</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
-          <li onMouseOver={() => findNavItem('Gallery')} onClick={() => setGetFinder(false)}>
+          <li
+           onMouseOver={() => findNavItem('Gallery')} onClick={() =>{
+            setGetFinder(false)
+            findNavItem('Gallery')
+           }} >
             <h2>Gallery</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
-          <li onMouseOver={() => findNavItem('Career')} onClick={() => setGetFinder(false)}>
+          <Link to='/Career'>
+          <li >
             <h2>Career</h2>
           </li>
+          </Link>
         </ul>
 
         <div className="nav-tools">
@@ -123,7 +145,7 @@ function Header() {
       </div>
 
       {toggleSidebar && <SideBar setToggleSidebar={setToggleSidebar} />}
-      {navItem && <DropBox navItem={navItem} setNavItem={setNavItem} findNavItem={findNavItem} />}
+      {navItem && <DropBox ref={dropDownRef} navItem={navItem} setNavItem={setNavItem} findNavItem={findNavItem} />}
     </div>
   );
 }

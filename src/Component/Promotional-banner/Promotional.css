@@ -17,6 +17,7 @@
 .banner-img img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .banner-shadow {
     padding: 6rem 0 0 3rem;

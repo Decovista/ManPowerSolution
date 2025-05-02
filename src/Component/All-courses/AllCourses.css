@@ -32,8 +32,6 @@
     animation: dropIn 0.6s ease forwards;
     opacity: 0;
 }
-
-
 @keyframes dropIn {
     from {
       transform: translateY(-50px);

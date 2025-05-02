@@ -11,6 +11,8 @@ import Page404 from './Component/PAGE-404/Page404';
 import { GlobalContext } from './context/GlobalContext';
 import AllCourses from './Component/All-courses/AllCourses';
 import ScrollToTop from './Component/Scroll-top/ScrollToTop';
+import Career from './Pages/Career/Career'
+import AboutPage from './Pages/AboutPage/AboutPage'
 
 function AppContent() {
   const { getFinder, setGetFinder, courseData } = useContext(GlobalContext);
@@ -27,6 +29,8 @@ function AppContent() {
           <Route path="/staff-gallery" element={<StaffGallery />} />
           <Route path="/:path" element={<CourseDetails />} />
           <Route path='/AllCourses' element={<AllCourses />} />
+          <Route path='/Career' element={<Career />} />
+          <Route path='/About' element={<AboutPage/>}/>
         </Routes>
       <Footer />
     </>

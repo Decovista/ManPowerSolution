@@ -17,7 +17,7 @@ function Footer() {
       <p>It is a rising startup in the vocational education space, focused on bridging the gap between skill development and employability.</p>
       </li>
           <li>
-          <p><span><i class="fa-solid fa-location-pin"></i> Our Presense :</span> Patna | Bangalore | Kolkata | Pune | Delhi NCR</p>
+          <p><span><i className="fa-solid fa-location-pin"></i> Our Presense :</span> Patna | Bangalore | Kolkata | Pune | Delhi NCR</p>
           </li>
           <li>
           <p>Unit No. 417, 4th Floor,<span>Vipul Business Park</span>, Sector 48, Main Sohna Road, Gurugram-122011.</p>
@@ -62,9 +62,9 @@ function Footer() {
         </ul>
       </div>
       <div className="social-media">
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-x-twitter"></i>
-      <i class="fa-brands fa-linkedin-in"></i>
+      <i className="fa-brands fa-instagram"></i>
+      <i className="fa-brands fa-x-twitter"></i>
+      <i className="fa-brands fa-linkedin-in"></i>
       </div>
       <div className="copyright">
         <p>© 2025 Manpower Solutions. All rights reserved.</p>

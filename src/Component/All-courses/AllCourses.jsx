@@ -13,7 +13,7 @@ function AllCourses() {
         {
           courseData.map((Item, index) => {
             return (
-              <li key={index} style={{ animationDelay: `${(index % 4) * 0.1}s` }}>
+              <li key={index} style={{ animationDelay: `${(index % 27) * 0.3}s` }}>
                 <div className="course-logo">
                   <img src={Item.icon} alt={`courseLogo${index}`} />
                 </div>

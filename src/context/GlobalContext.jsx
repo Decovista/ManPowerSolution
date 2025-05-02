@@ -6,6 +6,7 @@ export const GlobalContext = createContext();
 export const GlobalProvider = ({ children }) => {
   const [subTitle, setSubTitle] = useState('');
   const [getFinder, setGetFinder] = useState(null)
+  const [searchInput, setSearchInput] = useState('');
   console.log(getFinder)
   const getSubTitle = (e) => {
     setSubTitle(e.target.value);
@@ -47,7 +48,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '3',
-      icon: assets.rendomCourse,
+      icon: assets.ElectricalEngineering,
       Title: 'Electronic Technician',
       path: 'electronic-technician',
       Subject: [
@@ -377,7 +378,7 @@ export const GlobalProvider = ({ children }) => {
   
 
   return (
-    <GlobalContext.Provider value={{ subTitle, getSubTitle,courseData,getFinder, setGetFinder}}>
+    <GlobalContext.Provider value={{ subTitle, getSubTitle,courseData,getFinder, setGetFinder,searchInput, setSearchInput,getFinder}}>
       {children}
     </GlobalContext.Provider>
   );

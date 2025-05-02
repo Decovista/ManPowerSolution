@@ -35,7 +35,6 @@ import ComputerRepair from './Computer Repair.jpg'
 import DrivingTraining from './Driving Training.jpg'
 import ElectricalEngineering from './Electrical Engineering.jpg'
 import Fitter from './Fitter.jpg'
-import HotelManagement from './Driving Training.jpg'
 import HVAC  from './HVAC (Heating, Ventilation, and Air Conditioning).jpg'
 import MarketingSale from './Marketing and Sales.jpg'
 import Mechanical from './Mechanical.jpg'
@@ -46,9 +45,17 @@ import PlumbingWork from './Plumbing Work.jpg'
 import RuralMedical from './Rural Medical Practitioner (RMP).jpg'
 import SolarEnergyTechnician from './Solar Energy Technician.jpg'
 import TilesWorkTraining from './Tiles Work Training.jpg'
-
+import PromoBanner from './promo-banner.jpg'
+import ElectronicTechnician from './Electronic Technician.jpg'
+import HotelManagement from './Hotel-Management.jpg'
+import Boss from './Boss.jpg'
+import CampusCulture from './Campus-culture.jpg'
+import Faculty from './Faculty.jpg'
 
 export default {
+    Boss,
+    CampusCulture,
+    Faculty,
     AutomobileTechnician,
     AccountingAndFinance,
     Agriculture,
@@ -61,7 +68,6 @@ export default {
     DrivingTraining,
     ElectricalEngineering,
     Fitter,
-    HotelManagement,
     HVAC,
     MarketingSale,
     Mechanical,
@@ -96,5 +102,8 @@ export default {
     students5,
     students6,
     students7,
-    page404
+    page404,
+    PromoBanner,
+    ElectronicTechnician,
+    HotelManagement
 }
