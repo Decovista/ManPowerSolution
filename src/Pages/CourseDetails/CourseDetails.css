@@ -18,6 +18,17 @@
     cursor: pointer;
     margin: 0 auto;
 }
+.search-error {
+    padding: 41px 10px;
+    text-align: center;
+    font-size: 39px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.course-banner img {
+    object-fit: cover;
+    width: 100%;
+}
 .courseDetails p {
     font-size: 23px;
     font-weight: 500;

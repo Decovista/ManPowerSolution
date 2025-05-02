@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import assets from '../../public/assets';
 
 export const GlobalContext = createContext();
 
@@ -12,6 +13,7 @@ export const GlobalProvider = ({ children }) => {
    
   const courseData = [
     { id:  '1',
+      icon: assets.ElectricalEngineering,
       Title: 'Electrical Engineering',
       path: 'electrical-engineering',
       Subject: [
@@ -29,6 +31,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '2',
+      icon: assets.SolarEnergyTechnician,
       Title: 'Solar Energy Technician',
       path: 'solar-energy-technician',
       Subject: [
@@ -44,6 +47,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '3',
+      icon: assets.rendomCourse,
       Title: 'Electronic Technician',
       path: 'electronic-technician',
       Subject: [
@@ -57,6 +61,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '4',
+      icon: assets.WelderTraining,
       Title: 'Welder Training',
       path: 'welder-training',
       Subject: [
@@ -70,6 +75,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '5',
+      icon: assets.Fitter,
       Title: 'Fitter',
       path: 'fitter',
       Subject: [
@@ -82,6 +88,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '6',
+      icon: assets.AnimalHusbandry,
       Title: 'Animal Husbandry & Artificial Insemination (AI)',
       path: 'animal-husbandry-artificial-insemination',
       Subject: [
@@ -95,6 +102,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '7',
+      icon: assets.RuralMedical,
       Title: 'Rural Medical Practitioner (RMP)',
       path: 'rural-medical-practitioner',
       Subject: [
@@ -107,6 +115,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '8',
+      icon: assets.MobileRepair,
       Title: 'Mobile Repair',
       path: 'mobile-repair',
       Subject: [
@@ -119,6 +128,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '9',
+      icon: assets.ComputerRepair,
       Title: 'Computer Repair',
       path: 'computer-repair',
       Subject: [
@@ -131,6 +141,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '10',
+      icon:assets.AutomobileTechnician,
       Title: 'Automobile Technician',
       path: 'automobile',
       Subject: [
@@ -143,6 +154,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '11',
+      icon: assets.Agriculture,
       Title: 'Agriculture',
       path: 'agriculture',
       Subject: [
@@ -155,6 +167,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '12',
+      icon: assets.MarketingSale,
       Title: 'Marketing and Sales',
       path: 'marketing-and-sales',
       Subject: [
@@ -167,6 +180,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '13',
+      icon: assets.AccountingAndFinance,
       Title: 'Accounting and Finance',
       path: 'accounting-and-finance',
       Subject: [
@@ -179,6 +193,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '14',
+      icon: assets.HotelManagement,
       Title: 'Hotel Management',
       path: 'hotel-management',
       Subject: [
@@ -191,6 +206,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '15',
+      icon: assets.DrivingTraining,
       Title: 'Driving Training',
       path: 'driving-training',
       Subject: [
@@ -203,6 +219,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '16',
+      icon: assets.rendomCourse,
       Title: 'Safety Training',
       path: 'safety-training',
       Subject: [
@@ -215,6 +232,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '17',
+      icon: assets.AmanatTraining,
       Title: 'Amanat Training',
       path: 'amanat-training',
       Subject: [
@@ -227,6 +245,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '18',
+      icon: assets.PlumbingWork,
       Title: 'Plumbing Work',
       path: 'plumbing-work',
       Subject: [
@@ -239,6 +258,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '19',
+      icon: assets.rendomCourse,
       Title: 'Civil Training Work',
       path: 'civil-training-work',
       Subject: [
@@ -251,6 +271,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '20',
+      icon: assets.HVAC,
       Title: 'HVAC (Heating, Ventilation, and Air Conditioning)',
       path: 'hvac',
       Subject: [
@@ -263,6 +284,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '21',
+      icon: assets.rendomCourse,
       Title: 'Mechanical',
       path: 'mechanical',
       Subject: [
@@ -275,6 +297,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '22',
+      icon: assets.BeautyParlor,
       Title: 'Beauty Parlor',
       path: 'beauty-parlor',
       Subject: [
@@ -287,6 +310,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '23',
+      icon: assets.Tally,
       Title: 'Tally',
       path: 'tally',
       Subject: [
@@ -299,6 +323,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '24',
+      icon: assets.Carpentry,
       Title: 'Carpentry',
       path: 'carpentry',
       Subject: [
@@ -311,6 +336,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '25',
+      icon: assets.Painter,
       Title: 'Painter',
       path: 'painter',
       Subject: [
@@ -323,6 +349,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '26',
+      icon: assets.TilesWorkTraining,
       Title: 'Tiles Work Training',
       path: 'tiles-work-training',
       Subject: [
@@ -335,6 +362,7 @@ export const GlobalProvider = ({ children }) => {
     },
     {
       id:  '27',
+      icon: assets.AluminiumTrainingAndGlassWork,
       Title: 'Aluminium Training and Glass Work',
       path: 'aluminium-training-glass-work',
       Subject: [

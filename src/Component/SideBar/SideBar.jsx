@@ -9,10 +9,10 @@ function SideBar({ setToggleSidebar }) {
   const [activeSub, setActiveSub] = useState(null);
 
   const sideBarData = [
-    { MainTitle: 'Home'},
-    { MainTitle: 'Courses' },
-    { MainTitle: 'Gellery' },
-    { MainTitle: 'Career' }
+    { MainTitle: 'Home', path:'/'},
+    { MainTitle: 'Courses', path:'/AllCourses' },
+    { MainTitle: 'Gellery', path:'/Gellery' },
+    { MainTitle: 'Career', path:'/carrer' }
   ];
 
   const toggleMainMenu = (index) => {
@@ -33,23 +33,11 @@ function SideBar({ setToggleSidebar }) {
       <ul className="side-bar-wrapper">
         {sideBarData.map((mainT, idx) => (
           <li key={idx} className="sidebar-item">
+            <Link to={mainT.path} onClick={() => setToggleSidebar(false)}>
             <h2 className="sidebar-title" onClick={() => toggleMainMenu(idx)}>
               {mainT.MainTitle}
             </h2>
-
-            {activeMain === idx && (
-              <ul className="sub-menu">
-                {mainT.MainTitle === 'Courses' && courseData.map((item, courseIndex) => (
-                  courseIndex < 9 && (
-                   <Link to={`/${item.path}`}><li key={courseIndex} className="sub-menu-item" onClick={() => setToggleSidebar(false)}>
-                    <h3 className="sub-title" onClick={() => toggleSubMenu(courseIndex)}>
-                      {item.Title}
-                    </h3></li></Link>
-                  )
-                ))}
-
-              </ul>
-            )}
+            </Link>
           </li>
         ))}
       </ul>

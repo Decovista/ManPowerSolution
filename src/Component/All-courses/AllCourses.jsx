@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import {Link} from 'react-router-dom'
 import './AllCourses.css'; 
 import { GlobalContext } from '../../context/GlobalContext';
 
@@ -12,9 +13,12 @@ function AllCourses() {
         {
           courseData.map((Item, index) => {
             return (
-              <li key={index}>
+              <li key={index} style={{ animationDelay: `${(index % 4) * 0.1}s` }}>
+                <div className="course-logo">
+                  <img src={Item.icon} alt={`courseLogo${index}`} />
+                </div>
                 <h2>{Item.Title}</h2>
-                <p>{Item.description}</p>
+                <Link to={`/${Item.path}`}>  <button className='redirect-course'>Explore</button> </Link>
               </li>
             );
           })

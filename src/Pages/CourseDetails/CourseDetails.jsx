@@ -15,12 +15,15 @@ const CourseDetail = () => {
 
 
   if (!selectedCourse) {
-    return <div>Course not found for path: {path}</div>;
+    return <div className='search-error'>No results found for your Query: {path}</div>;
   }
 
   return (
     <div className='courseDetails'>
       <h1>{selectedCourse.Title}</h1>
+      <div className="course-banner">
+        <img src={selectedCourse.icon} alt="banner" />
+      </div>
       <p>{selectedCourse.description}</p>
       <ul>
         {selectedCourse.Subject.map((subject, index) => (
