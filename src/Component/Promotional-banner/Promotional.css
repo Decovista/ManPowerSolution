@@ -58,8 +58,19 @@
         display: none;
     } 
     .banner-shadow {
-        padding: 4rem 0 0 2rem !important;
+        padding: 2rem 0 0 1.3rem !important;
         width: 90% !important;
     }
+    .banner-shadow h2 {
+        font-size: 23px;
+    }
+    .banner-shadow p {
+        font-size: 13px;
+    }
+    .banner-shadow button {
+        height: 34px;
+        width: 180px;
+    }
+    
 }
 

@@ -7,16 +7,12 @@ const CourseDetail = () => {
   const { path } = useParams();  
   const { courseData } = useContext(GlobalContext);
 
-  console.log("Path from URL:", path);
-  console.log("All Course Data:", courseData);
-
   if (!courseData || !Array.isArray(courseData)) {
     return <div>Loading course data...</div>;
   }
 
   const selectedCourse = courseData.find(course => course.path === path);
 
-  console.log("Selected Course:", selectedCourse);
 
   if (!selectedCourse) {
     return <div>Course not found for path: {path}</div>;
@@ -31,6 +27,7 @@ const CourseDetail = () => {
           <li key={index}>{subject.SubjectTitle}</li>  
         ))}
       </ul>
+      <button>Enquire</button>
     </div>
   );
 };

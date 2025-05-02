@@ -11,7 +11,7 @@ function Promotional() {
         </h2>
          <p>Our mission is to bridge the gap between learning and employment by offering practical, industry-relevant courses that prepare individuals for real-world success.
          As a growing force in the education sector, Manpower Solutions is focused on innovation, hands-on learning, and empowering every learner to unlock their true potential.</p>
-         <button>Get US</button>
+         <button>About Us</button>
       </div>
       <div className="banner-img">
         <img src={assets.mission} alt="HomeBanner" />

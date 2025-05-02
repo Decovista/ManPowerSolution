@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {Link} from 'react-router-dom'
 import assets from '../../../public/assets'
 import  './Footer.css'
+import { GlobalContext } from '../../context/GlobalContext'
 
 function Footer() {
+  const {courseData} = useContext(GlobalContext)
   return (
     <div className='Footer'>
       <div className="main-wrapper">
@@ -25,13 +28,18 @@ function Footer() {
         </ul>
         <ul className='wrapper-c'>
           <h2>Courses</h2>
-          <li>&#9670;<p>Electrical Engineering</p></li>
-          <li>&#9670;<p>Solar Energy Technician</p></li>
-          <li>&#9670;<p>Electronic Technician</p></li>
-          <li>&#9670;<p>Welder Training</p></li>
-          <li>&#9670;<p>Fitter</p></li>
-          <li>&#9670;<p>Animal Husbandry & Artificial Insemination (AI)</p></li>
-          <li>&#9670;<p>Rural Medical Practitioner (RMP)</p></li>
+          {
+            courseData.map((item, index) => {
+              return(
+                index > 9 && index < 18 &&
+                <>
+                <Link to={`/${item.path}`}>
+                <li key={index}>&#9670;<p>{item.Title}</p></li>
+                </Link>
+                </>
+              )
+            })
+          }
         </ul>
         <ul className='wrapper-c'>
           <h2>Services</h2>

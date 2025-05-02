@@ -1,9 +1,10 @@
 .Footer {
     max-width: 1250px;
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-top: 1.4px solid #6c63ff;
 }
 .social-media i {
     font-size: 24px;
@@ -34,6 +35,9 @@ ul.wrapper {
 .wrapper-c {
     width: 244px;
     margin-top: 20px;
+}
+ul.wrapper-c a {
+    text-decoration: none;
 }
 .wrapper-c li{
     width: fit-content;

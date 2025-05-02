@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import "./Header.css";
 import assets from "../../../public/assets";
@@ -13,11 +13,15 @@ function Header() {
   const [navItem, setNavItem] = useState('');
   const [searchInput, setSearchInput] = useState('');
   const navigate = useNavigate();
-  const { courseData,setGetFinder } = useContext(GlobalContext);
+  const { courseData, setGetFinder } = useContext(GlobalContext);
 
   const findNavItem = (item) => {
     setNavItem(item);
   };
+  
+  useEffect(() => {
+    setGetFinder(false);
+  }, [setGetFinder]);
 
   const handleSearch = () => {
     const input = searchInput.trim().toLowerCase();
@@ -31,25 +35,30 @@ function Header() {
       return titleMatch || subjectMatch;
     });
 
-
     if (foundCourse?.path) {
       navigate(`/${foundCourse.path}`);
       setSearchInput('');
-      setToggleSearch(false);
+      setToggleSearch(false); 
+      setGetFinder(false);
     } else {
-      setGetFinder(true)
+        setGetFinder(true);
     }
+  };
+
+  const selectSearchBar = () => {
+    handleSearch();
+    setToggleSearch(true); 
   };
 
   return (
     <div className="Header">
-      <div className="search-bar-top">
+      <div className={`${toggleSearch ? 'show-search' : ''} search-bar-top`}>
         <div className={`${toggleSearch ? 'hide-bar' : ''} input-con-top-m`}>
           <i className="fa-solid fa-xmark" onClick={() => setToggleSearch(false)}></i>
           <div className="input-con-top">
             <input
               type="text"
-              placeholder="Courses"
+              placeholder="Search Courses"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
@@ -61,20 +70,20 @@ function Header() {
 
       <div className="Navigation">
         <div className="main-logo">
-          <Link to='/'><img src={assets.logo} alt="logo" /></Link>
+          <Link to='/' onClick={() => setGetFinder(false)}><img src={assets.logo} alt="logo" /></Link>
         </div>
 
         <ul className="nav-links">
-          <Link to='/'><li><i className="fa-solid fa-house"></i></li></Link>
-          <li onMouseOver={() => findNavItem('Subjects')}>
+          <Link to='/'><li><i className="fa-solid fa-house" onClick={() => setGetFinder(false)}></i></li></Link>
+          <li onMouseOver={() => findNavItem('Subjects')} onClick={() => setGetFinder(false)}>
             <h2>Courses</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
-          <li onMouseOver={() => findNavItem('Gallery')}>
+          <li onMouseOver={() => findNavItem('Gallery')} onClick={() => setGetFinder(false)}>
             <h2>Gallery</h2>
             <i className="fa-solid fa-chevron-down"></i>
           </li>
-          <li onMouseOver={() => findNavItem('Career')}>
+          <li onMouseOver={() => findNavItem('Career')} onClick={() => setGetFinder(false)}>
             <h2>Career</h2>
           </li>
         </ul>
@@ -83,13 +92,13 @@ function Header() {
           <div className="input-con">
             <input
               type="text"
-              placeholder="Courses"
+              placeholder="Search Courses"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
             />
             <i
-              onClick={() => setToggleSearch(true)}
+              onClick={selectSearchBar}
               className="fa-solid fa-magnifying-glass"
             ></i>
           </div>
@@ -106,7 +115,6 @@ function Header() {
               </ul>
             )}
           </div>
-
           <i
             className="fa-solid fa-bars"
             onClick={() => setToggleSidebar(!toggleSidebar)}

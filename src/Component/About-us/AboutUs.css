@@ -17,6 +17,7 @@ section.Whoweare .mission-img-con img {
     width: 100%;
     height: 100%;
     border-radius: 12px;
+    object-fit: cover;
 }
 .misson-text {
     width: 50%;
@@ -62,6 +63,9 @@ section.Whoweare .mission-img-con img {
 @media(max-width:768px){
     .Whoweare-wrapper {
         flex-direction: column;
+    }
+    .Whoweare-wrapper:last-child {
+        flex-direction: column-reverse;
     }
     .mission-img-con {
         width: 100%;

@@ -4,7 +4,8 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [subTitle, setSubTitle] = useState('');
-  const [getFinder, setGetFinder] = useState(false)
+  const [getFinder, setGetFinder] = useState(null)
+  console.log(getFinder)
   const getSubTitle = (e) => {
     setSubTitle(e.target.value);
   };

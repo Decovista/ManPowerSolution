@@ -60,7 +60,7 @@ function TopSubject() {
 
   return (
     <div className="explore-subjects">
-      <Link to='/All Courses'><span className='All-courses'>View All Subjects</span></Link>
+      <Link to='/AllCourses'><span className='All-courses-btn'>View All Subjects</span></Link>
       <h1>Explore <span>Top</span> Subjects</h1>
       
       <div className="tabs">

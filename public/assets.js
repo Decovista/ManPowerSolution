@@ -13,13 +13,20 @@ import Teacher2 from './Teacher2.jpg'
 import Teacher3 from './Teacher3.jpg' 
 import Teacher4 from './Teacher4.jpg' 
 import Teacher5 from './Teacher5.jpg' 
+import WelderTraining from './Welder Training.jpg'
+import Tally from './Tally.jpg'
+import SolarEnergyTechnician from './Solar Energy Technician.jpg'
+import students6 from './Students6.jpg'
+import students7 from './Students7.jpg'
+import students3 from './Students3.jpg'
 import students1 from './Students1.jpg'
 import students2 from './Students2.jpg'
 import students4 from './Students4.jpg'
 import students5 from './Students5.jpg'
-import students6 from './Students6.jpg'
-import students7 from './Students7.jpg'
-import students3 from './Students3.jpg'
+import page404 from './404.jpg'
+
+
+
 
 export default {
     logo,
@@ -43,5 +50,6 @@ export default {
     students4,
     students5,
     students6,
-    students7
+    students7,
+    page404
 }
