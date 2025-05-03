@@ -16,7 +16,7 @@ function DropBox({ navItem, setNavItem }) {
 
   const renderSubjects = () => (
     <ul>
-      {courseData.slice(0, 9).map((item, index) => (
+      {courseData.map((item, index) => (
         <li key={index} className="main-item" onClick={() => setTrackSubTitle(item)}>
           <Link to={`/${item.path}`}>
             <h2>{item.Title}</h2>
@@ -43,7 +43,7 @@ function DropBox({ navItem, setNavItem }) {
   );
 
   return (
-    <div className="DropBox" onMouseLeave={() => setNavItem('')}>
+    <div className={`${navItem === 'Subjects' ? 'Courses' : ''} DropBox`} onMouseLeave={() => setNavItem('')}>
       <div className="drop-box-wrapper">
         {navItem === 'Subjects' && renderSubjects()}
         {navItem === 'Gallery' && renderGalleryLinks()}

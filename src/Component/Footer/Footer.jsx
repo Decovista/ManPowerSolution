@@ -28,10 +28,10 @@ function Footer() {
         </ul>
         <ul className='wrapper-c'>
           <h2>Courses</h2>
+          <div className="course-wrapper">
           {
             courseData.map((item, index) => {
               return(
-                index > 9 && index < 18 &&
                 <>
                 <Link to={`/${item.path}`}>
                 <li key={index}>&#9670;<p>{item.Title}</p></li>
@@ -40,6 +40,7 @@ function Footer() {
               )
             })
           }
+          </div>
         </ul>
         <ul className='wrapper-c'>
           <h2>Services</h2>

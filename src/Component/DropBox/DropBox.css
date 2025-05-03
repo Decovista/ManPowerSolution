@@ -7,6 +7,23 @@
     transform: translateX(-22%);
     width: 332px;
 }
+.Courses{
+    height: 373px;
+    overflow-Y: scroll;
+}
+.Courses::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+.Courses::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+.Courses::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); 
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; 
+  }
 .drop-box-wrapper {
     display: flex;
     gap: 20px;

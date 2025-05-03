@@ -51,8 +51,10 @@ import HotelManagement from './Hotel-Management.jpg'
 import Boss from './Boss.jpg'
 import CampusCulture from './Campus-culture.jpg'
 import Faculty from './Faculty.jpg'
+import RegisterBg from './Register-form-bg.png'
 
 export default {
+    RegisterBg,
     Boss,
     CampusCulture,
     Faculty,
