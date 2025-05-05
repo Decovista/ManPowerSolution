@@ -102,15 +102,27 @@ ul.nav-links a {
 }
 
 .Register-btn button {
-  background-color: var(--secondary-color);
+  position: relative;
+  background-color: var(--accent-color);
   color: white;
   padding: 8px 18px;
-  border-radius: 6px;
+  border-radius: 2px;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: color 0.7s ease;
   outline: none;
+  height: 36px;
+  overflow: hidden;
+  background-size: 0% 100%; 
+  background-image: linear-gradient(to left, var(--primary-color), var(--accent-color)); 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Register-btn button:hover {
+  background-size: 100% 100%;
+  transition: background-size 0.7s ease; 
 }
 .nav-links li:hover i {
   transform: rotate(720deg);
@@ -121,24 +133,13 @@ i.fa-solid.fa-house {
   transition: 1s;
 }
 .Register-btn button:hover {
-  background-color: #f33649;
+  background-color: var(--primary-color);
   transform: scale(1.07);
-}
-ul.Register-drop-box {
-    position: absolute;
-    top: 100%;
-    background: #f33649;
-    list-style: none;
-    padding: 16px 27px;
-    color: white;
-    font-weight: 600;
-    width: 133px;
-    transform: translate(-42px, 0px);
-    animation: fadup .7s ease-in-out;
+  animation: fadup 2s ease-in-out;
 }
 @keyframes fadup {
   0%{
-    opacity: 0;
+    opacity: 90%;
   }
   100%{
     opacity: 100%;

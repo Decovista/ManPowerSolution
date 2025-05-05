@@ -13,19 +13,21 @@ import AllCourses from './Component/All-courses/AllCourses';
 import ScrollToTop from './Component/Scroll-top/ScrollToTop';
 import Career from './Pages/Career/Career'
 import AboutPage from './Pages/AboutPage/AboutPage'
+import ContactForm from './Component/ContactForm/ContactForm';
 
 function AppContent() {
-  const { getFinder, setGetFinder, courseData } = useContext(GlobalContext);
+  const { getFinder, setGetFinder, courseData, setToggleContact,toggleContact} = useContext(GlobalContext);
 
   return (
     <>
     <ScrollToTop/>
+    { toggleContact ? <ContactForm /> : '' } 
       <Header />
       {getFinder ? <Page404 /> : ''}
         
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Admissiondetails" element={<StudentsGallery />} />
+          <Route path="/StudentGallery" element={<StudentsGallery />} />
           <Route path="/staff-gallery" element={<StaffGallery />} />
           <Route path="/:path" element={<CourseDetails />} />
           <Route path='/AllCourses' element={<AllCourses />} />

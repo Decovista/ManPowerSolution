@@ -7,7 +7,7 @@ export const GlobalProvider = ({ children }) => {
   const [subTitle, setSubTitle] = useState('');
   const [getFinder, setGetFinder] = useState(null)
   const [searchInput, setSearchInput] = useState('');
-  console.log(getFinder)
+  const[toggleContact, setToggleContact] = useState(false)
   const getSubTitle = (e) => {
     setSubTitle(e.target.value);
   };
@@ -378,7 +378,7 @@ export const GlobalProvider = ({ children }) => {
   
 
   return (
-    <GlobalContext.Provider value={{ subTitle, getSubTitle,courseData,getFinder, setGetFinder,searchInput, setSearchInput,getFinder}}>
+    <GlobalContext.Provider value={{ subTitle, getSubTitle,courseData,getFinder, setGetFinder,searchInput, setSearchInput,setToggleContact,toggleContact}}>
       {children}
     </GlobalContext.Provider>
   );

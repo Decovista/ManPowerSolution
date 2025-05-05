@@ -1,19 +1,14 @@
 .testimonial-slider {
-  padding: 40px 10px;
+  padding: 5px 10px 23px;
   text-align: center;
   background-color: #f4f6f8;
 }
   .testimonial-title {
     font-size: 28px;
-    margin-bottom: 30px;
     font-size: 32px;
-    margin: 53px 0;
+    margin: 20px 0 32px;
     color: var(--primary-color);
 }
-  .testimonial-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
   .profile {
     width: 100%;
     overflow: hidden;

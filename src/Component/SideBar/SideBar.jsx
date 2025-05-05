@@ -11,8 +11,8 @@ function SideBar({ setToggleSidebar }) {
   const sideBarData = [
     { MainTitle: 'Home', path:'/'},
     { MainTitle: 'Courses', path:'/AllCourses' },
-    { MainTitle: 'Gellery', path:'/Gellery' },
-    { MainTitle: 'Career', path:'/carrer' }
+    { MainTitle: 'Gellery', path:'/StudentGallery' },
+    { MainTitle: 'Career', path:'/Career' }
   ];
 
   const toggleMainMenu = (index) => {
@@ -23,8 +23,6 @@ function SideBar({ setToggleSidebar }) {
   const toggleSubMenu = (index) => {
     setActiveSub(activeSub === index ? null : index);
   };
-
-  console.log(courseData ? 'good' : 'bad');
 
   return (
     <div className="SideBar">

@@ -11,7 +11,7 @@ function DropBox({ navItem, setNavItem }) {
 
   const Gallery = [
     { title: 'Staff', path: '/staff-gallery' },
-    { title: 'Students', path: '/Admissiondetails' },
+    { title: 'Students', path: '/StudentGallery' },
   ];
 
   const renderSubjects = () => (

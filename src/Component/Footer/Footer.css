@@ -6,6 +6,9 @@
     flex-direction: column;
     border-top: 1.4px solid #6c63ff;
 }
+.Footer a{
+    text-decoration: none;
+}
 .social-media i {
     font-size: 24px;
     background: #6c63ff;
@@ -81,6 +84,12 @@ ul.wrapper-c a {
     margin-top: 15px;
     color: var(--accent-color);
     font-size: 22px;
+}
+.Footer li a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    gap: 10px;
 }
 .Footer p, .Footer ul li p {
     font-size: 16px;

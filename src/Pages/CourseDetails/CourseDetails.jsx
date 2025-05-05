@@ -5,7 +5,7 @@ import './CourseDetails.css'
 
 const CourseDetail = () => {
   const { path } = useParams();  
-  const { courseData } = useContext(GlobalContext);
+  const { courseData,setToggleContact } = useContext(GlobalContext);
 
   if (!courseData || !Array.isArray(courseData)) {
     return <div>Loading course data...</div>;
@@ -30,7 +30,7 @@ const CourseDetail = () => {
           <li key={index}>{subject.SubjectTitle}</li>  
         ))}
       </ul>
-      <button>Enquire</button>
+      <button onClick={() => setToggleContact(true)}>Enquire</button>
     </div>
   );
 };

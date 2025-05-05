@@ -7,12 +7,11 @@ import DropBox from "../DropBox/DropBox";
 import { GlobalContext } from "../../context/GlobalContext";
 
 function Header() {
-  const [toggleRegister, setToggleRegister] = useState(false);
   const [toggleSearch, setToggleSearch] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [navItem, setNavItem] = useState('');
   const navigate = useNavigate();
-  const { courseData, setGetFinder,searchInput,setSearchInput } = useContext(GlobalContext);
+  const { courseData, setGetFinder,searchInput,setSearchInput , setToggleContact} = useContext(GlobalContext);
   const dropDownRef = useRef('')
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -126,16 +125,9 @@ function Header() {
           </div>
 
           <div className="Register-btn">
-            <button onClick={() => setToggleRegister(!toggleRegister)}>
-              Register
+            <button onClick={() => setToggleContact(true)}>
+           Contact Us
             </button>
-            {toggleRegister && (
-              <ul className="Register-drop-box">
-                <li>As Student</li>
-                <li>As College</li>
-                <li>As Organisation</li>
-              </ul>
-            )}
           </div>
           <i
             className="fa-solid fa-bars"
