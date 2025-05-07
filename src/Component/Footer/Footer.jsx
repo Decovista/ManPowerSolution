@@ -20,9 +20,9 @@ function Footer() {
             </p>
           </li>
           <li>
-            <a href="tel:+91 8562812327">
+            <a href="tel:+91 8562813027">
               <i className="fa-solid fa-phone"></i>
-              <p>+91 8562812327</p>
+              <p>+91 8562813027</p>
             </a>
           </li>
           <li>
