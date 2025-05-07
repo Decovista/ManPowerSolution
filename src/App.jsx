@@ -14,6 +14,7 @@ import ScrollToTop from './Component/Scroll-top/ScrollToTop';
 import Career from './Pages/Career/Career'
 import AboutPage from './Pages/AboutPage/AboutPage'
 import ContactForm from './Component/ContactForm/ContactForm';
+import FAQ from './Component/FAQ/FAQ';
 
 function AppContent() {
   const { getFinder, setGetFinder, courseData, setToggleContact,toggleContact} = useContext(GlobalContext);
@@ -28,6 +29,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/StudentGallery" element={<StudentsGallery />} />
+          <Route path="/Faq" element={<FAQ/>} />
           <Route path="/staff-gallery" element={<StaffGallery />} />
           <Route path="/:path" element={<CourseDetails />} />
           <Route path='/AllCourses' element={<AllCourses />} />

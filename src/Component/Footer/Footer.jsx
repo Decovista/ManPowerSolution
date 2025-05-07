@@ -84,27 +84,27 @@ function Footer() {
         </ul>
         <ul className="wrapper-c">
           <h2>Others</h2>
-          <li>
+          <Link to='/FAQ'>  <li>
             &#9670;<p>Frequently Asked Question</p>
-          </li>
-          <li>
+          </li></Link>
+       <Link to='/About'> <li>
             &#9670;<p>Who We Are</p>
-          </li>
-          <li>
+          </li></Link>
+          <Link to='/About'> <li>
             &#9670;<p>Our Team</p>
-          </li>
-          <li>
+          </li></Link>
+          <Link to='/About'> <li>
             &#9670;<p>About</p>
-          </li>
-          <li>
+          </li></Link>
+          <Link to='/About'> <li>
             &#9670;<p>branch</p>
-          </li>
-          <li>
+          </li></Link>
+          <Link to='/About'> <li>
             &#9670;<p>Mission</p>
-          </li>
-          <li>
+          </li></Link>
+          <Link to='/About'><li>
             &#9670;<p>Vission</p>
-          </li>
+          </li></Link>
         </ul>
       </div>
       <div className="social-media">

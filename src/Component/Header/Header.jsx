@@ -36,7 +36,10 @@ function Header() {
 
   const handleSearch = () => {
     const input = searchInput.trim().toLowerCase();
-    if (!input) return;
+    if (!input) {
+      alert('No input Found')
+      return ;
+    }
 
     const foundCourse = courseData.find(course => {
       const titleMatch = course.Title?.toLowerCase().includes(input);
