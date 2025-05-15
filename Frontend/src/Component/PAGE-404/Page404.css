@@ -1,0 +1,41 @@
+.Page-404 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: anime .8s ease-in;
+    z-index: 999999999;
+}
+@keyframes anime{
+    0%{
+        opacity: 1%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.Page-404 i.fa-solid.fa-xmark {
+    position: absolute;
+    right: 2%;
+    font-size: 32px;
+    color: var(--primary-color);
+    cursor: pointer;
+    top: 1%;
+}
+.Page-404-wrapper {
+    background: url('../../../public/404.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+@media(max-width:500px){
+    .Page-404 {
+        width: 99%;
+        transform: translateX(0.4%) translateY(0%);
+    }
+}

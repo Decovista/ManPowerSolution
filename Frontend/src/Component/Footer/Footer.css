@@ -1,0 +1,132 @@
+.Footer {
+    max-width: 1250px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1.4px solid #6c63ff;
+}
+.Footer a{
+    text-decoration: none;
+}
+.social-media i {
+    font-size: 24px;
+    background: #6c63ff;
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin: 15px 19px;
+    border-radius: 6px;
+    color: #fff;
+}
+.social-media {
+    border-top: 1px solid #6c63ff;
+    border-bottom: 1px solid #6c63ff;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.copyright p {
+    margin: 20px 0;
+    font-weight: 500;
+    color: #6c63ff !important;
+    text-align: center;
+}
+ul.wrapper {
+    width: 288px;
+}
+.wrapper-c {
+    width: 244px;
+    margin-top: 20px;
+}
+.course-wrapper{
+    height: 346px;
+    overflow-y: scroll;
+}
+.course-wrapper::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+.course-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+.course-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); 
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; 
+  }
+ul.wrapper-c a {
+    text-decoration: none;
+}
+.wrapper-c li{
+    width: fit-content;
+}
+.Footer h2 {
+    color: #6c63ff;
+    margin: 20px 0;
+} 
+.Footer span {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 16px;
+}
+.Footer img {
+    height: 82px;
+    margin: 20px;
+    object-fit: contain;
+    text-align: center;
+}
+.Footer li {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 15px;
+    color: var(--accent-color);
+    font-size: 22px;
+}
+.Footer li a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    gap: 10px;
+}
+.Footer p, .Footer ul li p {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+.main-wrapper {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.Footer button {
+    height: 40px;
+    width: 140px;
+    margin: 20px 0;
+    background: #6c63ff;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+@media (min-width: 1180px) {
+    .wrapper-c {
+        width: fit-content !important;
+    }
+}
+@media(max-width:1260px){
+    .Footer {
+        padding: 0 20px;
+    }
+}
+@media(max-width:527px){
+    .wrapper-c, ul.wrapper {
+        width: 100% ;
+        margin-top: 20px;
+    }
+}
